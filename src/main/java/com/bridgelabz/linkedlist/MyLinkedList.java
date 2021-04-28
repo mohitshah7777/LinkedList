@@ -9,6 +9,7 @@ public class MyLinkedList {
         this.tail = null;
     }
 
+    //UC2 ADDING DATA
     public void add(INode newNode) {
         if (this.tail == null)
             this.tail = newNode;
@@ -21,6 +22,7 @@ public class MyLinkedList {
         }
     }
 
+    //UC3 APPENDING DATA
     public void append(INode newNode) {
         if(this.head == null)
             this.head = newNode;
@@ -31,6 +33,12 @@ public class MyLinkedList {
             this.tail = newNode;
             tempNode.setNext(newNode);
         }
+    }
+
+    //UC4 INSERT DATA IN BETWEEN
+    public void insert(INode myNode, INode newNode) {
+        this.head.setNext(myNode);
+        myNode.setNext(newNode);
     }
 
     public void printMyNodes(){
