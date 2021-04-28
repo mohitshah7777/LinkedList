@@ -48,6 +48,17 @@ public class MyLinkedList {
         return tempNode;
     }
 
+    //UC6 DELETE THE LAST ELEMENT
+    public INode popLast(){
+        INode tempNode = head;
+        while (!tempNode.getNext().equals(tail)) {
+            tempNode = tempNode.getNext();
+        }
+        this.tail = tempNode;
+        tempNode = null;
+        return tempNode;
+    }
+
     public void printMyNodes(){
         StringBuffer myNodes = new StringBuffer("My Nodes: ");
         INode tempNode = head;
