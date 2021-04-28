@@ -106,6 +106,7 @@ public class MyLinkedListTest {
         Assert.assertTrue(result);
     }
 
+    //UC 8 INSERT 40 AFTER 30
     @Test
     public void given3Numbers_Insert40After30_shouldBeAdded(){
         MyNode<Integer> myFirstNode = new MyNode<>(56);
