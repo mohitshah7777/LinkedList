@@ -59,6 +59,17 @@ public class MyLinkedList {
         return tempNode;
     }
 
+    //UC7 SEARCH LINKEDLIST TO FIND NODE WITH KEY 30
+    public void search(INode myNode){
+        INode tempNode = head;
+        while (tempNode.getNext()!=myNode){
+            tempNode=tempNode.getNext();
+        }
+        tempNode = tempNode.getNext();
+        System.out.println("Searched Element is = " +tempNode.getKey());
+
+    }
+
     public void printMyNodes(){
         StringBuffer myNodes = new StringBuffer("My Nodes: ");
         INode tempNode = head;
